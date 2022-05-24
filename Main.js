@@ -1,26 +1,10 @@
-const n = parseInt().readLine();
-const inputs = readline();
+const n = parseInt(readline()); // the number of temperatures to analyse
+const inputs = readline().split(' ').map(x => +x);
 
-For (i = 0; i < n; i++) {
- const t = inputs[i]; //chaque valeur
- 
- If (t > 0) {
-  //t *= -1 
+let min = Infinity;
 
- t.sort(function(a, b) {
-   return a-b;
- }
+for (let i in inputs) {
+    (Math.abs(inputs[i]) < Math.abs(min) || inputs[i] === -min && inputs[i] > 0) && (min = inputs[i]);
+};
 
-} else {
- 
-}
- 
- t.sort(function(a, b) {
-   return a-b;
- }); //Tri variable t
-
- console.log(inputs[0]); 
-
-
-
-}
+print(min || 0); 
