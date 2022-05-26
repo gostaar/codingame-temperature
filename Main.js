@@ -7,4 +7,4 @@ for (let i in inputs) {
     (Math.abs(inputs[i]) < Math.abs(min) || inputs[i] === -min && inputs[i] > 0) && (min = inputs[i]);
 };
 
-print(min || 0); 
+console.log(min || 0); 
